@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 1. Write a function that displays current date & time in your
+        // browser.
+
+        function TimeFun() {
+            let CurrTime = new Date()
+            console.log(CurrTime)
+        }
+        TimeFun()
+
+        // 2. Write a function that takes first & last name and then it 
+        //   greets the user using his full name
+
+
+        function greets() {
+            let FirstName = " Mickel"
+            let LastName = " jhon"
+            return FirstName + LastName
+
+        }
+
+        let userGreet = greets()
+        console.log(userGreet)
+
+        // 3. Write a function that adds two numbers (input by user) 
+        //   and returns the sum of two numbers.
+
+        function sum(a, b) {
+            return a + b
+        }
+        let result = sum(2, 5)
+        console.log(result)
+
+        // 4. Calculator:
+        //    Write a function that takes three arguments num1, num2
+        //     & operator & compute the desired operation.Return and 
+        //    show the desired result in your browser
+
+
+        function userInfo(num1, num2) {
+
+            let result = num1 + num2
+            return result
+        }
+
+        let output = userInfo(5, 8)
+        console.log(output)
+
+        // 5. Write a function that squares its argument
+
+
+        function squaresFun(num) {
+            let sqr;
+            for (let i = 1; i < num; i++) {
+                sqr = i * i
+                console.log(sqr)
+
+            }
+
+        }
+        squaresFun(6)
+
+        // 6. Write a function that computes factorial of a number
+
+        function factorialFun() {
+
+            let num = 5;
+            let fact = 1
+
+            for (num; num >= 1; num--) {
+                fact *= num
+                console.log(fact)
+            }
+
+        }
+        factorialFun()
+
+        // =============================Another way to find factorial========================
+
+        function fact(num) {
+
+            if (num < 0) {
+                return -1
+            }
+            else if (num === 0) {
+
+                return 1
+            }
+            else {
+                return (num * fact(num - 1))
+            }
+        }
+
+        fact(4)
+
+        // 7. Write a function that take start and end number as inputs
+        //     & display counting in your browser
+
+
+
+        // 10. Write a JavaScript function that checks whether a passed 
+        //     string is palindrome or not ?
+        //     A palindrome is word, phrase, or sequence that reads the same backward as
+        //     forward, e.g., madam.
+
+
+        function palindrome(string) {
+            let strSplit = string.split("")
+            let strReverse = strSplit.reverse()
+            console.log(strSplit)
+            console.log(strReverse)
+            let strJoin = strReverse.join("")
+            console.log(strJoin)
+
+            if (string === strJoin) {
+                console.log("Its a palindrome word")
+            }
+            else {
+                console.log("its not plaindrome word")
+            }
+        }
+
+        palindrome("deed")
+
+        // 11. Write a JavaScript function that accepts a string as a 
+        // parameter and converts the first letter of each word of the
+        // string in upper case. 
+        // EXAMPLE STRING: 'the quick brown fox'
+        // EXPECTED OUTPUT: 'The Quick Brown Fox'
+
+        function CapitilizStr(str){
+            let string = str.split(" ")
+            let word = string[0].slice(0).upperCase()
+            console.log(string)
+            console.log(word)
+        }
+
+        CapitilizStr("the quick brown fox")
+    </script>
+</body>
+
+</html>
